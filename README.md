@@ -1,4 +1,4 @@
-# JavascriptRecap
+# JavaScriptRecap
 
 ## The Fundamentals
 ---
@@ -16,13 +16,13 @@
 - // subtraction 
 % // remainder or modulo
 
-// Creful using these two
+// Careful using these two
 Infinity // + infinity 
 -Infinity // - infinity 
 
 NaN // not a number (confused)
 
-// As long as the the quotes at the start and the end of the string match
+// As long as the quotes at the start and the end of the string match
 // String can be represented in 3 ways
 "I am  a string"
 'This is another string'
@@ -58,7 +58,7 @@ Strings are ordered **alphabetically**. "a" being the 'smallest' to "z" the 'lar
 "Z" > "a" // is capital "Z" greater than "a"?
 false // output 
 ```
-Well, with the exception of uppercase letters. They are always “less” than lowercase ones. 
+Well, with the exception of uppercase letters. They are always "less" than lowercase ones. 
 <br>
 To visually see it from "largest" to "smallest": <br>
 <br>
@@ -66,8 +66,8 @@ To visually see it from "largest" to "smallest": <br>
 <br>
 (...) The three dots here simply indicate an intentional omission of the letters but the pattern should be clear. <br>
 <br>
-So, how will javascript compare **longer** strings (i.e words, sentences)? <br>
-Javascript goes over the string from left to right, comparing the unicodes (characters) one by one: <br>
+So, how will JavaScript compare **longer** strings (i.e words, sentences)? <br>
+Javascript goes over the string from left to right, comparing the Unicode characters one by one: <br>
 * Compares first characters of both words, decides whether one is greater or they're both equal. 
 * When both firsts are equal, goes on to compare the next two. 
 * Repeat until the end. 
@@ -75,7 +75,7 @@ Javascript goes over the string from left to right, comparing the unicodes (char
 
 ### `Other`
 ```javascript
->= // greatr than or equal to 
+>= // greater than or equal to 
 <= // less than or equal to 
 != // not equal to 
 ```
@@ -102,7 +102,7 @@ false // output: produces false
 <strong>null</strong> and <strong>undefined</strong> are empty values and the difference can be ignored. 
 
 ### `Automatic Conversion`
-Javascript tries to please everyone. There's a cost to that "openness".
+JavaScript tries to please everyone. There's a cost to that "openness".
 ```javascript
 12 * null // multiplication 
 0 // output 
@@ -116,8 +116,8 @@ Javascript tries to please everyone. There's a cost to that "openness".
 "five" * 2 // string "five" times 2
 NaN // output 'Not a Number'
 ```
-This is just Javascript being Javascript. This is called *type coercion*. JS notices an operation and tries its "best" to satisfy the instructions by quietly converting the values. <br>
-In the **first case**, `null` becomes `0`. In the **second case**, it recognizes `"51"` as a string but also realizes that `-` is an operator on numerics and `1` is also a numeric value. Whereas in the **third case**, the `+` operator is used for concatinating two strings together and "5" is already a string, so it makes sense to cast `1` as a string as well. 
+This is just JavaScript being JavaScript. This is called *type coercion*. JS notices an operation and tries its "best" to satisfy the instructions by quietly converting the values. <br>
+In the **first case**, `null` becomes `0`. In the **second case**, it recognizes `"51"` as a string but also realizes that `-` is only an operator for *numbers* so it automatically parses 51 as an integer. Whereas in the **third case**, the `+` operator is used for concatenating two strings together and "5" is already a string, so it makes sense to cast `1` as a string as well. When both arguments of the `+` operator are numbers, it acts as a normal plus sign.
 <br>
 
 `==` tests whether both values are the same.<br>
@@ -137,7 +137,7 @@ const age = 25;
 ```
 `const` is used to define a constant variable which points to its value for as long as it 'lives'. So probably setting age to 25 with `const` isn't a good idea if I plan on living longer! 
 
-**Note:** `var` is the way variables were declared prior to 2015 in Javascript and it does mostly the same things as `let`, except that it's visible outside of its defined scope. 
+**Note:** `var` is the way variables were declared prior to 2015 in JavaScript and it does mostly the same things as `let`, except that it's visible outside of its defined scope. 
 
 ### Conditionals: `if` `else` statements
 `if` keyword executes or skips a statement depending on the value of a Boolean expression.
@@ -164,7 +164,7 @@ if (expressionOne) {
     wellDoThisThen();
 }
 ```
-**Note:** Indentation in javascript is simply to enhance code readibility unlike Python which "breathes" it. You could write your program in a single line if you wanted to. **Don't do it**!<br>
+**Note:** Indentation in JavaScript is simply to enhance code readability unlike Python which "breathes" it. You could write your program in a single line if you wanted to. **Don't do it**!<br>
 Since you insist:
 ```javascript
 if (expressionOne){doSomething();} else if(expressionTwo{
@@ -187,7 +187,7 @@ A `for` loop consists of three parts, the `for` keyword itself, the statement in
 The statement `(let number = 0; number <= 6; number +2)` does three things seperated by two semicolons. It initializes the loop, checks if it must continue and how it must update. <br>
 
 ### `switch` | Act-07
-Switch allows you to put a number of scenarios (`case` labels) and javascript will start executing at the label that corresponds to the value that `switch` was given, or `default`s when no matching value was found. <br>
+Switch allows you to put a number of scenarios (`case` labels) and JavaScript will start executing at the label that corresponds to the value that `switch` was given, or `default`s when no matching value was found. <br>
 Let's say, depending on your budget you want to go somewhere for a vacation. 
 
 ```javascript
@@ -213,9 +213,9 @@ switch (true) {
 **Note:** Don't forget the `break` statement, or else it will execute code you don't want. 
 
 ## Objects & Arrays
-**Arryas:** <br>
+**Arrays:** <br>
 
-Arrays (lists) in Javascript are declared using square brackets.
+Arrays (lists) in JavaScript are declared using square brackets.
 ```javascript
 let someArray = [2,57,63,5];
 ```
@@ -224,7 +224,7 @@ You can access its property using a dot `.` or brackets.
 `someArray.length` or `someArray["length"]` do the same thing. <br>
 **Note:** Properties that contain functions are called methods.  <br>
 ```javascript
-someArray.push(76); // adds the number 76 at the end of the array and reutrns the new length of the array
+someArray.push(76); // adds the number 76 at the end of the array and returns the new length of the array
 
 someArray.pop(); // removes the last element and returns it.
 76 // output  
@@ -256,7 +256,7 @@ The `concat` method can be used to glue arrays together to create a new array.
 <br>
 <strong>Objects</strong>
 <br>
-Objects are a collection of properties seperated by commas. <br>
+Objects are a collection of properties separated by commas. <br>
 
 ```javascript
 let someObject = {
@@ -307,7 +307,7 @@ addNumbers(1, 2, 3);
 ```
 The values of those parameters are assigned by its caller. Then a `return` statement determines the final output of that function. 
 
-**Note:** Each binding (variable) in JS has a scope where it's 'visible'. Variables with global scopre are visible and can be used anywhere in the program. Variables created inside a function are only visible within that function, they are local variables. Unless declared using the `var` keyword, in that case they are gloabl. There are also degrees to locality and functions can be nested.
+**Note:** Each binding (variable) in JS has a scope where it's 'visible'. Variables with global scope are visible and can be used anywhere in the program. Variables created inside a function are only visible within that function, they are local variables. Unless declared using the `var` keyword, in that case they are global. There are also degrees to locality and functions can be nested.
 
 ### Function Declaration:
 ```javascript
@@ -324,7 +324,7 @@ function secondPart() {
     return " Just like everyone else.' -Margaret Mead";
 }
 ```
-If you haven't noticed, we called the function `secondPart()` before we've even declared it. This is because function declarations are not part of the top-to-bottom execution you're used to. Those functions get moved to the top of **their scope** and can be used anywhere within tha scope. 
+If you haven't noticed, we called the function `secondPart()` before we've even declared it. This is because function declarations are not part of the top-to-bottom execution you're used to. Those functions get moved to the top of **their scope** and can be used anywhere within that scope. 
 
 ### Arrow Function
 The arrow `=>` comes after the parameters then followed by the function's body. You can remember it this way "This list of params => will produce the following".
@@ -351,7 +351,7 @@ function addition(x1, x2) {
 
 console.log(addition(2, 2, "It's a beautiful day!"));
 ```
-**Note:** if you pass too many arguments, they will get ignored. However, when you pass too few arguements, they will get replaced with `undifined`. <br>
+**Note:** if you pass too many arguments, they will get ignored. However, when you pass too few arguments, they will get replaced with `undefined`. <br>
 The `=` operator is used as default in case an argument isn't passed. 
 
 ```javascript
@@ -400,7 +400,7 @@ let hungryDog = {
 
 hungryDog.speak("I am hungry");
 ```
-Think of `this` as an extra parameter which isn't passed explicitly! However, if you want to pass it, you use a function's `call` method which takes `this` as its first argument and the rest arguements passed to it as normal arguements. 
+Think of `this` as an extra parameter which isn't passed explicitly! However, if you want to pass it, you use a function's `call` method which takes `this` as its first argument and the rest arguments passed to it as normal arguments. 
 
 ```javascript
 speak.call(hungryDog, "Burp!");
@@ -408,7 +408,7 @@ speak.call(hungryDog, "Burp!");
 ```
 ## Promises
 <img src=images/promise.gif width="230"> <br>
-Javascript relies a lot on asynchronous computations. A promise is a placeholder for a value that we don’t have now but will have later. Well there ar only two possible outcomes; we either make good on our promise and we get the data as a value or something unexpected happens in that case we get an error. <b>
+Javascript relies a lot on asynchronous computations. A promise is a placeholder for a value that we don't have now but will have later. Well there are only two possible outcomes; we either make good on our promise and we get the data as a value or something unexpected happens in that case we get an error. <b>
 
 
 ```javascript
@@ -438,7 +438,7 @@ getJSON("data/troops.json", function(err, troops){
 });
 
 ```
-This code is difficult to understand and adding new steps can be very painful. Also, some of these steps can be done in parallel. Let's say we want to set a plan in motion that require us to know which soldier we have at our disposal, the plan itsel, and the location where our plan will play out, we could write something like this.
+This code is difficult to understand and adding new steps can be very painful. Also, some of these steps can be done in parallel. Let's say we want to set a plan in motion that require us to know which soldier we have at our disposal, the plan itself, and the location where our plan will play out, we could write something like this.
 ```javascript
         var troops, mapInfo, plan;
 
@@ -478,7 +478,5 @@ This code is difficult to understand and adding new steps can be very painful. A
             alert("Error", err)
         }
 ```
-
-
 
 
